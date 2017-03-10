@@ -1,0 +1,87 @@
+﻿@keyframes dragAndUploadHover {
+	0% {
+		opacity: .6;
+	}
+
+	10% {
+		opacity: .4;
+	}
+
+	20% {
+		opacity: .8;
+	}
+
+	60% {
+		opacity: .8;
+	}
+
+	100% {
+		opacity: .6;
+	}
+}
+
+@keyframes dragAndUploadHover2 {
+	0% {
+		opacity: .6;
+	}
+
+	10% {
+		opacity: .4;
+	}
+
+	20% {
+		opacity: .4;
+	}
+
+	30% {
+		opacity: .8;
+	}
+
+	60% {
+		opacity: .8;
+	}
+
+	100% {
+		opacity: .6;
+	}
+}
+
+@keyframes dragAndUploadHover3 {
+	0% {
+		opacity: .6;
+	}
+
+	10% {
+		opacity: .4;
+	}
+
+	30% {
+		opacity: .4;
+	}
+
+	40% {
+		opacity: .8;
+	}
+
+	60% {
+		opacity: .8;
+	}
+
+	100% {
+		opacity: .6;
+	}
+}
+
+@keyframes dragAndUploadUploading {
+	0% {
+		opacity: .4;
+	}
+
+	50% {
+		opacity: .8;
+	}
+
+	100% {
+		opacity: .4;
+	}
+}
