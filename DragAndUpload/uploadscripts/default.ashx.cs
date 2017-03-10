@@ -1,5 +1,13 @@
-﻿using System;
-using System.Linq;
+﻿/**
+ * Drag and Upload 1.2
+ * A Remi A Olsen Production :D
+ * remi@remiolsen.info / https://remiolsen.info
+ * 
+ * This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License:
+ * https://creativecommons.org/licenses/by-nc/4.0/
+ */
+
+using System;
 using System.Web;
 
 namespace uploader.uploader {
@@ -9,8 +17,7 @@ namespace uploader.uploader {
 	/// </summary>
 	public class _default1 : IHttpHandler {
 		private readonly string savePath = HttpContext.Current.Server.MapPath("~/DragAndUpload/uploads/");
-		private readonly string[] allowedFileTypes = { "image/png", "image/jpeg", "image/gif" };
-		private const int maxFiles = 20;
+		private const int maxFiles = 5;
 
 		public void ProcessRequest(HttpContext context) {
 			try {

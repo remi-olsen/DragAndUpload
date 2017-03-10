@@ -1,12 +1,10 @@
 ﻿/**
- *				dragAndUpload 1.2
- *					  by
- *				 Remi A Olsen
- *
- * A simple file upload script.
- *
- * v1.1: Added manual "input type='file'" function.
- * v1.2: Incorporated Mojo-branch code.
+ * Drag and Upload 1.2
+ * A Remi A Olsen Production :D
+ * remi@remiolsen.info / https://remiolsen.info
+ * 
+ * This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License:
+ * https://creativecommons.org/licenses/by-nc/4.0/
  */
 
 'use strict';
@@ -15,7 +13,7 @@ var
 	duConfig,
 	skeleton = {
 		// URL to post upload to.
-		url: '/do.php',
+		url: 'DragAndUpload/uploadscripts/default.ashx',
 		// Max total size of uploads.
 		maxSize: 5242880,
 		// Max number of files to upload.
