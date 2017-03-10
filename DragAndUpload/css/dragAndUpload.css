@@ -1,0 +1,165 @@
+﻿.dragAndUpload,
+.dragAndUpload * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+.dragAndUpload {
+	background: rgb(255,255,255);
+	border-radius: 100px;
+	box-shadow: rgba(0,0,0,.2) 5px 5px 10px;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	height: 50px;
+	line-height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	perspective: 1000px;
+	width: 100px;
+}
+
+	.dragAndUpload span {
+		display: none;
+	}
+
+	.dragAndUpload:active span.dot {
+		transform: scale(.5);
+	}
+
+	.dragAndUpload span.dot {
+		background: rgb(0,0,0);
+		border-radius: 12px;
+		display: block;
+		height: 12px;
+		left: 50%;
+		margin: -6px 0 0 -6px;
+		opacity: .6;
+		position: absolute;
+		transition: .2s;
+		top: 50%;
+		width: 12px;
+	}
+
+		.dragAndUpload span.dot:nth-of-type(2) {
+			margin: -6px 0 0 -24px;
+		}
+
+		.dragAndUpload span.dot:nth-of-type(3) {
+			margin: -6px 0 0 12px;
+		}
+
+.dragAndUploadCounter {
+	background: rgb(255,255,255);
+	border-radius: 16px;
+	box-shadow: rgba(0,0,0,.15) 10px 10px 30px;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 32px;
+	position: absolute;
+	text-align: center;
+	left: -12px;
+	top: -12px;
+	transform: scale(0);
+	transform-origin: center center;
+	transition: .4s all;
+	transition-delay: .1s;
+	width: 50px;
+}
+
+	.dragAndUploadCounter.active {
+		transform: scale(1);
+	}
+
+.dragAndUploadManual {
+	display: none;
+}
+
+.dragAndUploadActive span.dot {
+	animation: dragAndUploadHover2 2s infinite;
+}
+
+	.dragAndUploadActive span.dot:nth-of-type(2) {
+		animation: dragAndUploadHover 2s infinite;
+	}
+
+	.dragAndUploadActive span.dot:nth-of-type(3) {
+		animation: dragAndUploadHover3 2s infinite;
+	}
+
+.dragAndUploadUploading span.dot {
+	animation: dragAndUploadUploading 2s infinite;
+}
+
+	.dragAndUploadUploading span.dot:nth-of-type(2) {
+		animation: dragAndUploadUploading 2s infinite;
+	}
+
+	.dragAndUploadUploading span.dot:nth-of-type(3) {
+		animation: dragAndUploadUploading 2s infinite;
+	}
+
+.dragAndUpload:after {
+	background: rgb(255,255,255);
+	border-radius: 32px;
+	box-shadow: rgba(0,0,0,.15) 10px 10px 30px;
+	font-size: 12px;
+	font-weight: 600;
+	left: -12px;
+	line-height: 32px;
+	position: absolute;
+	top: -12px;
+	transform: scale(0);
+	transform-origin: center center;
+	transition: 5s transform;
+	width: 32px;
+}
+
+.dragAndUpload.dragAndUploadSuccess:after,
+.dragAndUpload.dragAndUploadFailure:after {
+	transform: scale(1);
+}
+
+.dragAndUpload.dragAndUploadSuccess:after {
+	/* content: '\01F44D';  -- thumbs up emoji */
+	content: ':D';
+}
+
+.dragAndUpload.dragAndUploadFailure:after {
+	/*content: '\01F44E'; -- thumbs down emoji */
+	content: ':(';
+}
+
+.dragAndUpload span.dragAndUploadMessage {
+	background: rgb(255,255,255);
+	border-radius: 20px;
+	box-shadow: rgba(0,0,0,.15) 10px 10px 30px;
+	display: block;
+	font-size: 12px;
+	left: 0;
+	line-height: 1.2em;
+	padding: 20px;
+	position: absolute;
+	text-align: left;
+	top: 45px;
+	text-transform: none;
+	transition: .3s all;
+	transition-delay: .1s;
+	transform: scale(0);
+	transform-origin: top center;
+	width: 100px;
+	z-index: 0;
+}
+
+.dragAndUpload.dragAndUploadFailure span.dragAndUploadMessage {
+	transform: scale(1);
+}
