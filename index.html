@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head runat="server">
+	<link rel="stylesheet" type="text/css" href="dragAndUpload/css/dragAndUpload.css">
+	<link rel="stylesheet" type="text/css" href="dragAndUpload/css/dragAndUploadAnimations.css">
+	<script type="text/javascript" src="dragAndUpload/js/dragAndUpload.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			try {
+				var d = Object.create(dragAndUpload);
+				d.setUp({ url: '/testkitchen/dragandupload/dragandupload/uploadscripts/default.ashx' });
+			} catch (exception) {
+				console.log('Error creating menus. In all likelihood your browser is out of date.\r\n', exception, '\r\n', navigator.userAgent);
+			}
+		};
+	</script>
+	<style type="text/css">
+		/* For demo purposes only. Not required for Drag And Upload. */
+		body {
+			font: 16px/1em "Helvetica Neue", "Segoe UI", sans-serif;
+		}
+	</style>
+
+	<title>Drag and Upload</title>
+</head>
+<body>
+	<h1>Drag and Upload 1.2</h1>
+
+	<form id="form1" enctype="multipart/form-data" method="post" action=".">
+		<label for="myDragElement" class="dragAndUpload" data-post-string="?todo=test">
+			<span>Click or drag and drop to upload file</span>
+			<input type="file" multiple="multiple" class="dragAndUploadManual" name="myDragElement" id="myDragElement" />
+		</label>
+	</form>
+</body>
+</html>
