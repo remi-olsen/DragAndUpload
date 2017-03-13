@@ -8,7 +8,7 @@
 		window.onload = function () {
 			try {
 				var d = Object.create(dragAndUpload);
-				d.setUp({ url: '/testkitchen/dragandupload/dragandupload/uploadscripts/default.ashx' });
+				d.setUp({ url: 'uploadscripts/default.ashx' });
 			} catch (exception) {
 				console.log('Error creating menus. In all likelihood your browser is out of date.\r\n', exception, '\r\n', navigator.userAgent);
 			}
