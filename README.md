@@ -12,6 +12,8 @@
 
 For the sake of example, we will point to the C# ASHX script. You would, in all likelihood, want to create your own back-end script, and point the `setUp` call to it.
 
+The default scripts uploads to `uploads` folder in the root. Make sure to create that folder before running the script, or, much preferably, create a folder somewhere else.
+
 In the `head` block, add the following:
 
 		<link rel="stylesheet" type="text/css" href="dragAndUpload/css/dragAndUpload.css">
