@@ -39,12 +39,12 @@ To create a drop element, put the following into your `form` block:
 		
 When the file is dropped (or the drop element is clicked for manual uploads), it will post to the URL passed in the setup with the `data-post-string` appended to it, i.e.:
 
-		dragandupload/uploadscripts/default.ashx?todo=test
+		dragAndUpload/uploadscripts/default.ashx?todo=test
 		
 The `skeleton` object in the JavaScript holds all configuration properties, and the can all be configured in `setUp`. The commone ones are:
 
 		// URL to post upload to.
-		url: 'DragAndUpload/uploadscripts/default.ashx',
+		url: 'dragAndUpload/uploadscripts/default.ashx',
 		
 		// Max total size of uploads.
 		maxSize: 5242880,
