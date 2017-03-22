@@ -1,6 +1,6 @@
 ﻿<?php
 /**
- * Drag and Upload 1.2
+ * Drag and Upload 1.2.1
  * A Remi A Olsen Production :D
  * remi@remiolsen.info / https://remiolsen.info
  * 

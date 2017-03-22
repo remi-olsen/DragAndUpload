@@ -1,5 +1,5 @@
 ﻿/**
- * Drag and Upload 1.2
+ * Drag and Upload 1.2.1
  * A Remi A Olsen Production :D
  * remi@remiolsen.info / https://remiolsen.info
  * 
@@ -13,7 +13,7 @@ var
 	duConfig,
 	skeleton = {
 		// URL to post upload to.
-		url: 'DragAndUpload/uploadscripts/default.ashx',
+		url: 'dragAndUpload/uploadscripts/default.ashx',
 		// Max total size of uploads.
 		maxSize: 5242880,
 		// Max number of files to upload.
@@ -139,13 +139,13 @@ var
 			counterElement.className += ' ' + s.counterClassActive;
 			xhr.onreadystatechange = function (e) {
 				if (xhr.readyState === 4 && xhr.status === 200) {
-					if (xhr.response.substring(0, 5) === "error") {
-						s.message('Upload failed. Please contact site administrator for further assistance.', 1, dropElement, xhr.response, s);
+					if (xhr.responseText.substring(0, 5) === "error") {
+						s.message('Upload failed. Please contact site administrator for further assistance.', 1, dropElement, xhr.responseText, s);
 					} else {
-						s.message('Upload complete!', 0, dropElement, xhr.response, s);
+						s.message('Upload complete!', 0, dropElement, xhr.responseText, s);
 					}
 				} else if (xhr.readyState === 4 && xhr.status !== 200) {
-					s.message('Upload failed. Please contact site administrator for further assistance', 1, dropElement, xhr.response, s);
+					s.message('Upload failed. Please contact site administrator for further assistance', 1, dropElement, xhr.responseText, s);
 				}
 			};
 			xhr.upload.onprogress = function (e) {
@@ -239,10 +239,10 @@ var
 				dot.className = 'dot';
 				dropElement.appendChild(dot);
 			}
-			var messageElement = document.createElement('span');
+			var messageElement = document.createElement('span'),
+				counterElement = document.createElement('div');
 			messageElement.className = duConfig.messageElement;
 			dropElement.appendChild(messageElement);
-			var counterElement = document.createElement('div');
 			counterElement.className = duConfig.counterClass;
 			dropElement.appendChild(counterElement);
 

@@ -1,5 +1,5 @@
 ﻿/**
- * Drag and Upload 1.2
+ * Drag and Upload 1.2.1
  * A Remi A Olsen Production :D
  * remi@remiolsen.info / https://remiolsen.info
  * 
@@ -135,6 +135,8 @@
 
 .dragAndUpload.dragAndUploadSuccess:after,
 .dragAndUpload.dragAndUploadFailure:after {
+	left: inherit;
+	right: -12px;
 	transform: scale(1);
 }
 

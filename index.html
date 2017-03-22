@@ -1,5 +1,5 @@
 ﻿<!--
- * Drag and Upload 1.2
+ * Drag and Upload 1.2.1
  * A Remi A Olsen Production :D
  * remi@remiolsen.info / https://remiolsen.info
  *
@@ -9,7 +9,7 @@
 
 <!DOCTYPE html>
 <html lang="en-us">
-<head runat="server">
+<head>
 	<link rel="stylesheet" type="text/css" href="dragAndUpload/css/dragAndUpload.css">
 	<link rel="stylesheet" type="text/css" href="dragAndUpload/css/dragAndUploadAnimations.css">
 	<script type="text/javascript" src="dragAndUpload/js/dragAndUpload.js"></script>
@@ -17,23 +17,22 @@
 		window.onload = function () {
 			try {
 				var d = Object.create(dragAndUpload);
-				d.setUp({ url: 'dragandupload/uploadscripts/default.ashx' });
+				d.setUp({ url: 'dragAndUpload/uploadscripts/default.ashx' });
 			} catch (exception) {
 				console.log('Error creating menus. In all likelihood your browser is out of date.\r\n', exception, '\r\n', navigator.userAgent);
 			}
 		};
 	</script>
 	<style type="text/css">
-		/* For demo purposes only. Not required for Drag And Upload. */
+		/* For demo purposes only. Not required for Drag and Upload. */
 		body {
 			font: 16px/1em "Helvetica Neue", "Segoe UI", sans-serif;
 		}
 	</style>
-
 	<title>Drag and Upload</title>
 </head>
 <body>
-	<h1>Drag and Upload 1.2</h1>
+	<h1>Drag and Upload 1.2.1</h1>
 
 	<form id="form1" enctype="multipart/form-data" method="post" action=".">
 		<label for="myDragElement" class="dragAndUpload" data-post-string="?todo=test">

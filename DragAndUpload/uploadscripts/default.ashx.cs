@@ -1,5 +1,5 @@
 ﻿/**
- * Drag and Upload 1.2
+ * Drag and Upload 1.2.1
  * A Remi A Olsen Production :D
  * remi@remiolsen.info / https://remiolsen.info
  * 
@@ -16,7 +16,7 @@ namespace uploader.uploader {
 	/// Modify and secure code if you plan on using this live.
 	/// </summary>
 	public class _default1 : IHttpHandler {
-		private readonly string savePath = HttpContext.Current.Server.MapPath("~/DragAndUpload/uploads/");
+		private readonly string savePath = HttpContext.Current.Server.MapPath("~/dragAndUpload/uploads/");
 		private const int maxFiles = 5;
 
 		public void ProcessRequest(HttpContext context) {
