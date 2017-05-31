@@ -54,3 +54,13 @@ The `skeleton` object in the JavaScript holds all configuration properties, and 
 		
 		// Allowed MIME types. Set to [] to allow all file types. E.g.: ['image/png', 'text/html']
 		allowedFileTypes: []
+
+## Custom listener
+
+Upon successful uploads, the label will get the response text set in the `data-response` attribute. This can be helpful if you want to create a custom listener to deal with the uploaded file. Example:
+
+		document.getElementById('YOURCUSTOMLABELID').addEventListener('DOMSubtreeModified', function (e) {
+			if(this.className.indexOf('dragAndUploadSuccess') > -1) {
+				console.log('Response -- ', this.getAttribute('data-response'));
+			}
+		});
