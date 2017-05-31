@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Drag and Upload 1.2.1
  * A Remi A Olsen Production :D
  * remi@remiolsen.info / https://remiolsen.info
@@ -136,6 +136,7 @@ var
 			var xhr = new XMLHttpRequest(),
 				qs = dropElement.getAttribute('data-post-string') + '&cacheisbad=' + new Date().getTime(),
 				counterElement = dropElement.querySelector('.' + s.counterClass);
+			dropElement.removeAttribute('data-response');
 			counterElement.className += ' ' + s.counterClassActive;
 			xhr.onreadystatechange = function (e) {
 				if (xhr.readyState === 4 && xhr.status === 200) {
@@ -143,6 +144,7 @@ var
 						s.message('Upload failed. Please contact site administrator for further assistance.', 1, dropElement, xhr.responseText, s);
 					} else {
 						s.message('Upload complete!', 0, dropElement, xhr.responseText, s);
+						dropElement.setAttribute('data-response', xhr.responseText);
 					}
 				} else if (xhr.readyState === 4 && xhr.status !== 200) {
 					s.message('Upload failed. Please contact site administrator for further assistance', 1, dropElement, xhr.responseText, s);
