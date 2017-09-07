@@ -54,6 +54,8 @@ The `skeleton` object in the JavaScript holds all configuration properties, and 
 		
 		// Allowed MIME types. Set to [] to allow all file types. E.g.: ['image/png', 'text/html']
 		allowedFileTypes: []
+		
+*Note on the C# ASHX script*: Make sure you create a .Net solution and add all Drag and Upload to the solution, as per usual .Net/IIS standards.
 
 ## Custom listener
 
